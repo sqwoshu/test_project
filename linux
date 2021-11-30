@@ -1,0 +1,10 @@
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+try:
+	firefoxOptions = Options()
+	firefoxOptions.add_argument("-headless")
+	browser = webdriver.Firefox(executable_path="geckodriver", options=firefoxOptions)
+	browser.get("http://www.python.org")	
+	print('okey')
+except Exception as ex:
+	print(ex)
